@@ -1,0 +1,60 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ValorantCardandTitleChanger"
+        xmlns:controls="clr-namespace:ValorantCardandTitleChanger.Controls"
+        x:Class="ValorantCardandTitleChanger.MainWindow"
+        Background="#DEDEDE"
+        mc:Ignorable="d"
+        Title="Valorant Inventory Exploit" Height="1000" Width="1920">
+    <Window.Resources>
+        <Style x:Key="MyButtonStyle" TargetType="Button">
+            <Setter Property="Background" Value="Transparent" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid Background="{TemplateBinding Background}">
+                            <ContentPresenter />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <FontFamily x:Key="VarelaRound" >/Assets/Fonts/#Varela Round Regular</FontFamily>
+    </Window.Resources>
+    <Grid Margin="20">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="150"/>
+        </Grid.RowDefinitions>
+
+        <controls:NeumorphicImage VerticalAlignment="Center" Grid.Column="0" Grid.Row="0" ImageSrc="https://media.valorant-api.com/playercards/48ed2529-4295-c37a-eaa1-15a1c4137abe/largeart.png"/>
+        <controls:NeumorphicTextBlock VerticalAlignment="Center" Grid.Column="1" Grid.Row="0" Text="Bait"/>
+ 
+        <Grid Grid.Row="1" VerticalAlignment="Center" ColumnSpan="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <controls:NeumorphicTextButton Grid.Column="0" ButtonClick="SaveClick" Text="Save"/>
+            <controls:NeumorphicTextButton Grid.Column="1" ButtonClick="ResetClick" Text="Reset"/>
+
+            <controls:NeumorphicTextBlock Grid.Column="2" x:Name="IgnTextBlock" />
+
+            <controls:NeumorphicTextButton Grid.Column="3" ButtonClick="LoginClick"  Text="Login"/>
+        </Grid>
+
+        
+
+
+    </Grid>
+
+</Window>

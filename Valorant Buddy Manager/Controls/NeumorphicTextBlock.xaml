@@ -1,0 +1,38 @@
+﻿<UserControl x:Class="ValorantCardandTitleChanger.Controls.NeumorphicTextBlock"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:ValorantCardandTitleChanger.Controls"
+             mc:Ignorable="d" 
+             x:Name="Self">
+    <UserControl.Resources>
+        <FontFamily x:Key="VarelaRound">/Assets/Fonts/#Varela Round Regular</FontFamily>
+    </UserControl.Resources>
+    <Grid HorizontalAlignment="Center" VerticalAlignment="Center"> 
+        <Border 
+
+                Background="Transparent" BorderBrush="#DEDEDE"
+                BorderThickness="5" CornerRadius="12">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="12"
+                                  ShadowDepth="5" Direction="315"
+                                  Color="#000000" Opacity="0.2"/>
+                </Border.Effect>
+            </Border>
+            <Border 
+                
+                Background="Transparent" BorderBrush="#DEDEDE"
+                BorderThickness="5" CornerRadius="12">
+                <Border.Effect>
+                    <DropShadowEffect BlurRadius="12"
+                                  ShadowDepth="5" Direction="135"
+                                  Color="#FFFFFF" Opacity="0.8"/>
+                </Border.Effect>
+                
+        </Border>
+        <TextBlock Margin="40" FontSize="20" FontFamily="{StaticResource VarelaRound}" IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Foreground="Black" FontWeight="ExtraBold" Text="{Binding Text, ElementName=Self}"/>
+    </Grid>
+        
+
+</UserControl>
